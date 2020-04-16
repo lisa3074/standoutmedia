@@ -47,36 +47,24 @@ function scrollMenu() {
   });
   document.querySelectorAll(".menu_burger li:nth-child(2), .menu li:nth-child(2)").forEach((li) => {
     li.addEventListener("click", function () {
-      document.querySelector("#velkommen").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      velkommenLink();
     });
   });
 
   document.querySelectorAll(".menu_burger li:nth-child(3), .menu li:nth-child(3)").forEach((li) => {
     li.addEventListener("click", function () {
       console.log("click");
-      document.querySelector("#velkommen").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      velkommenLink();
     });
   });
   document.querySelectorAll(".menu_burger li:nth-child(4), .menu li:nth-child(4)").forEach((li) => {
     li.addEventListener("click", function () {
-      document.querySelector("#velkommen").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      velkommenLink();
     });
   });
   document.querySelectorAll(".menu_burger li:nth-child(5), .menu li:nth-child(5)").forEach((li) => {
     li.addEventListener("click", function () {
-      document.querySelector("#velkommen").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      velkommenLink();
     });
   });
   document.querySelectorAll(".menu_burger li:nth-child(6), .menu li:nth-child(6)").forEach((li) => {
@@ -94,5 +82,12 @@ function scrollMenu() {
         block: "start",
       });
     });
+  });
+}
+
+function velkommenLink() {
+  document.querySelector("#velkommen").scrollIntoView({
+    behavior: "smooth",
+    block: "start",
   });
 }
