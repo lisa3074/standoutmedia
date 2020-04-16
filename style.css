@@ -82,6 +82,7 @@ header {
 /* 
  /////// NAVIGATION MOBILE //////
 */
+
 .desktop_nav {
   display: none;
 }
@@ -300,6 +301,7 @@ nav li {
 /* 
  /////// CONTACT SECTION MOBILE //////
 */
+
 #contact {
   padding: 1rem 2rem;
   text-align: center;
@@ -356,6 +358,7 @@ textarea {
   padding: 2rem 0;
   margin-bottom: 2rem;
 }
+
 /* 
  /////// FOOTER SECTION MOBILE //////
 */
@@ -391,6 +394,7 @@ footer p {
   header {
     height: 6rem;
   }
+
   /* 
  /////// WELCOME SECTION DESKTOP //////
 */
@@ -455,6 +459,7 @@ footer p {
   /* 
  /////// FOOTER SECTION DESKTOP //////
 */
+
   footer {
     display: flex;
     flex-wrap: nowrap;
@@ -534,6 +539,7 @@ footer p {
   /* 
  /////// INFO DESKTOP //////
 */
+
   .text {
     display: flex;
     flex-wrap: nowrap;
@@ -572,6 +578,7 @@ footer p {
   /* 
  /////// NAVIGATION DESKTOP //////
 */
+
   .mobile_nav {
     display: none;
   }
@@ -628,6 +635,7 @@ footer p {
   /* 
  /////// SPLASH SECTION DESKTOP //////
 */
+
   #splash {
     height: 25rem;
     display: flex;
