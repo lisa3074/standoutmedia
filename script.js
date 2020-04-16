@@ -39,74 +39,81 @@ function scrollMenu() {
 
   document.querySelectorAll(".menu_burger li:nth-child(1), .menu li:nth-child(1)").forEach((li) => {
     li.addEventListener("click", function () {
+      const id = "#tilbud";
       removeValgt();
-      this.classList.add("valgt");
-      document.querySelector("#tilbud").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      checkForDesktop();
+      velkommenLink(id);
     });
   });
   document.querySelectorAll(".menu_burger li:nth-child(2), .menu li:nth-child(2)").forEach((li) => {
     li.addEventListener("click", function () {
+      const id = "#velkommen";
       removeValgt();
-      this.classList.add("valgt");
-      velkommenLink();
+      checkForDesktop();
+      velkommenLink(id);
     });
   });
 
   document.querySelectorAll(".menu_burger li:nth-child(3), .menu li:nth-child(3)").forEach((li) => {
     li.addEventListener("click", function () {
+      const id = "#velkommen";
       removeValgt();
-      this.classList.add("valgt");
+      checkForDesktop();
       console.log("click");
-      velkommenLink();
+      velkommenLink(id);
     });
   });
   document.querySelectorAll(".menu_burger li:nth-child(4), .menu li:nth-child(4)").forEach((li) => {
     li.addEventListener("click", function () {
+      const id = "#velkommen";
       removeValgt();
-      this.classList.add("valgt");
-      velkommenLink();
+      checkForDesktop();
+      velkommenLink(id);
     });
   });
   document.querySelectorAll(".menu_burger li:nth-child(5), .menu li:nth-child(5)").forEach((li) => {
     li.addEventListener("click", function () {
+      const id = "#velkommen";
       removeValgt();
-      this.classList.add("valgt");
-      velkommenLink();
+      checkForDesktop();
+      velkommenLink(id);
     });
   });
   document.querySelectorAll(".menu_burger li:nth-child(6), .menu li:nth-child(6)").forEach((li) => {
     li.addEventListener("click", function () {
+      const id = "#trægulv";
       removeValgt();
-      this.classList.add("valgt");
-      document.querySelector("#trægulv").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      checkForDesktop();
+      velkommenLink(id);
     });
   });
   document.querySelectorAll(".menu_burger li:nth-child(7), .menu li:nth-child(7)").forEach((li) => {
     li.addEventListener("click", function () {
+      const id = "#vådrum";
       removeValgt();
-      this.classList.add("valgt");
-      document.querySelector("#vådrum").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      checkForDesktop();
+      velkommenLink(id);
     });
   });
 }
 
-function velkommenLink() {
-  document.querySelector("#velkommen").scrollIntoView({
+function velkommenLink(id) {
+  document.querySelector(id).scrollIntoView({
     behavior: "smooth",
     block: "start",
   });
 }
 function removeValgt() {
-  document.querySelectorAll("li").forEach((li) => {
+  document.querySelectorAll(".menu li").forEach((li) => {
     li.classList.remove("valgt");
   });
+}
+
+function checkForDesktop() {
+  console.log("desktopMenu");
+  let desktop = event.target.parentNode.classList[0];
+  if (desktop == "menu") {
+    console.log("menu parent");
+    event.target.classList.add("valgt");
+  }
 }
