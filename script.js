@@ -27,12 +27,12 @@ function setHeight() {
 
 function scrollMenu() {
   console.log("scrollMenu");
-
   document.querySelectorAll(".logo").forEach((logo) => {
     logo.addEventListener("click", function () {
-      document.querySelector("#splash").scrollIntoView({
+      console.log("click");
+      document.querySelector("main").scrollTo({
+        top: 0,
         behavior: "smooth",
-        block: "start",
       });
     });
   });
