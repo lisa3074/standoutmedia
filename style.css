@@ -95,10 +95,9 @@ header {
 
 .mobile_nav img {
   object-fit: contain;
-  width: auto;
+  width: 200px;
   height: 5rem;
   padding: 1rem 0;
-  margin-left: -1rem;
 }
 
 .open_burger {
