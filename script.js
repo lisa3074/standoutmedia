@@ -37,62 +37,23 @@ function scrollMenu() {
     });
   });
 
-  document.querySelectorAll(".menu_burger li:nth-child(1), .menu li:nth-child(1)").forEach((li) => {
+  document.querySelectorAll(".menu_burger li, .menu li").forEach((li) => {
     li.addEventListener("click", function () {
-      const id = "#tilbud";
       removeValgt();
       checkForDesktop();
-      velkommenLink(id);
-    });
-  });
-  document.querySelectorAll(".menu_burger li:nth-child(2), .menu li:nth-child(2)").forEach((li) => {
-    li.addEventListener("click", function () {
-      const id = "#velkommen";
-      removeValgt();
-      checkForDesktop();
-      velkommenLink(id);
-    });
-  });
-
-  document.querySelectorAll(".menu_burger li:nth-child(3), .menu li:nth-child(3)").forEach((li) => {
-    li.addEventListener("click", function () {
-      const id = "#velkommen";
-      removeValgt();
-      checkForDesktop();
-      console.log("click");
-      velkommenLink(id);
-    });
-  });
-  document.querySelectorAll(".menu_burger li:nth-child(4), .menu li:nth-child(4)").forEach((li) => {
-    li.addEventListener("click", function () {
-      const id = "#velkommen";
-      removeValgt();
-      checkForDesktop();
-      velkommenLink(id);
-    });
-  });
-  document.querySelectorAll(".menu_burger li:nth-child(5), .menu li:nth-child(5)").forEach((li) => {
-    li.addEventListener("click", function () {
-      const id = "#velkommen";
-      removeValgt();
-      checkForDesktop();
-      velkommenLink(id);
-    });
-  });
-  document.querySelectorAll(".menu_burger li:nth-child(6), .menu li:nth-child(6)").forEach((li) => {
-    li.addEventListener("click", function () {
-      const id = "#trægulv";
-      removeValgt();
-      checkForDesktop();
-      velkommenLink(id);
-    });
-  });
-  document.querySelectorAll(".menu_burger li:nth-child(7), .menu li:nth-child(7)").forEach((li) => {
-    li.addEventListener("click", function () {
-      const id = "#vådrum";
-      removeValgt();
-      checkForDesktop();
-      velkommenLink(id);
+      if (event.target.classList[0] == "vel") {
+        const id = "#tilbud";
+        velkommenLink(id);
+      } else if (event.target.classList[0] == "slib" || event.target.classList[0] == "lin" || event.target.classList[0] == "vaad" || event.target.classList[0] == "trae") {
+        const id = "#velkommen";
+        velkommenLink(id);
+      } else if (event.target.classList[0] == "om") {
+        const id = "#trægulv";
+        velkommenLink(id);
+      } else {
+        const id = "#vådrum";
+        velkommenLink(id);
+      }
     });
   });
 }
